@@ -13,9 +13,9 @@ function Navbar() {
     }
 
     return (
-        <div className='container'>
+        <div className='container_navbar'>
             <nav className='navbar'>
-                <h1>Where in the world?</h1>
+                <h1 className='logo'>Where in the world?</h1>
                 <label className="switch">
                     <input type="checkbox" onChange={(e) => handleChange(e)}></input>
                     <span className="slider"></span>

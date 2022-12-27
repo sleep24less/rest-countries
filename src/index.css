@@ -75,10 +75,26 @@ body {
 
 /* NAVBAR */
 
+.container_navbar {
+  min-width: 100vw;
+  height: 60px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.253);
+  background-color: var(--color-bg-elements);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 30px 0px 40px;
+}
+
+.navbar .logo {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 /* COLOR VARIABLES */
@@ -105,7 +121,7 @@ body {
   --width-of-switch: 2em;
   --height-of-switch: 2em;
   /* size of sliding icon -- sun and moon */
-  --size-of-icon: 1.4em;
+  --size-of-icon: 1.8em;
   /* it is like a inline-padding of switch */
   --slider-offset: 0.3em;
   position: relative;
