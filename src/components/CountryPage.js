@@ -1,10 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion'
-import CountryCard from './CountryCard';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './home.css'
 
-function Home() {
+function CountryPage() {
     const [countries, setCountries] = React.useState([]);
     const url = 'https://restcountries.com/v2/all'
 
@@ -24,25 +23,12 @@ function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className='container main home'
+            className='main country_page'
         >
-            {countries.map(country => {
-
-                const { numericCode, name, population, region, capital, flag, cioc } = country;
-
-                return <CountryCard
-                    key={numericCode}
-                    code={cioc}
-                    className='grid_element'
-                    flag={flag}
-                    name={name}
-                    capital={capital}
-                    region={region}
-                    population={population}
-                />
-            })}
+            <p>Country info</p>
+            <Link to="/" className="navbar_item">Back to home</Link>
         </motion.div>
     )
 }
 
-export default Home
+export default CountryPage

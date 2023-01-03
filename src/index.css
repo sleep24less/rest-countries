@@ -69,41 +69,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
-  max-width: 1440px;
-}
-
-/* NAVBAR */
-
-.container_navbar {
-  min-width: 100vw;
-  height: 60px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.253);
-  background-color: var(--color-bg-elements);
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1440px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 30px 0px 40px;
-}
-
-.navbar .logo {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
 /* COLOR VARIABLES */
 :root {
   transition: 0.2s ease;
-  --color-bg: #fafafa;
+  --color-bg: #ececec;
   --color-bg-elements: #ffffff;
   --color-text: #111517;
-  --color-text-light: #536872;
+  --color-text-light: #43545c;
+  --color-accent: #FF6E31;
 }
 
 :root.dark {
@@ -112,6 +85,87 @@ body {
   --color-bg-elements: #2b3945;
   --color-text: #ffffff;
   --color-text-light: #cfcfcf;
+  --color-accent: #FF6E31;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+a {
+  all: unset;
+}
+
+/* NAVBAR */
+
+.container_navbar {
+  min-width: 100%;
+  height: 60px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.253);
+  background-color: var(--color-bg-elements);
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 85px 0px 80px;
+}
+
+.navbar .logo {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* MAIN */
+
+.main {
+  position: relative;
+  flex-grow: 1;
+  padding: 0px 30px;
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: var(--color-bg-elements);
+  width: 100%;
+  color: var(--color-text-light);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.253);
+  flex-shrink: 0;
+}
+
+/* FOOTER ICON ANIMATION */
+.footer .fa-github {
+  color: var(--color-text-light);
+  font-size: 1rem;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 10px;
+  margin-top: 4px;
+}
+
+.footer .fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+  color: var(--color-accent);
 }
 
 /* DARK MODE SWITCH */
@@ -172,3 +226,17 @@ input:checked+.slider:before {
   box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
   transition: .5s;
 }
+
+@media only screen and (max-width: 768px) {
+
+  .navbar {
+    padding: 0px 20px;
+  }
+
+  .navbar .logo {
+    font-size: 1rem;
+  }
+}
+
+/* Hover only works on devices with hover capabilities */
+@media (hover: hover) {}
