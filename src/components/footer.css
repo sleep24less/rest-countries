@@ -1,0 +1,31 @@
+/* FOOTER */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: var(--color-bg-elements);
+    width: 100%;
+    color: var(--color-text-light);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.253);
+    flex-shrink: 0;
+}
+
+/* FOOTER ICON ANIMATION */
+.footer .fa-github {
+    color: var(--color-text-light);
+    font-size: 1rem;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 10px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.footer .fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+    color: var(--color-accent);
+}

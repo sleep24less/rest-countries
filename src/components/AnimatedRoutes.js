@@ -11,7 +11,7 @@ function AnimatedRoutes() {
         <AnimatePresence mode='wait'>
             <Routes location={location} key={location.pathname} >
                 <Route path="/" element={<Home />} />
-                <Route path="/country" element={<CountryPage />} />
+                <Route path="/country/:code" element={<CountryPage />} />
             </Routes>
         </AnimatePresence>
     )

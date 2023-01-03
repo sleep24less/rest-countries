@@ -93,6 +93,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100%;
+  width: 100%;
 }
 
 .container {
@@ -103,32 +104,6 @@ a {
   all: unset;
 }
 
-/* NAVBAR */
-
-.container_navbar {
-  min-width: 100%;
-  height: 60px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.253);
-  background-color: var(--color-bg-elements);
-}
-
-.navbar {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-shrink: 0;
-  max-width: 1440px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 85px 0px 80px;
-}
-
-.navbar .logo {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
 /* MAIN */
 
 .main {
@@ -137,104 +112,42 @@ a {
   padding: 0px 30px;
 }
 
-/* FOOTER */
-
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  background-color: var(--color-bg-elements);
-  width: 100%;
-  color: var(--color-text-light);
-  font-family: inherit;
-  font-size: 0.9rem;
-  font-weight: 500;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.253);
-  flex-shrink: 0;
-}
-
-/* FOOTER ICON ANIMATION */
-.footer .fa-github {
-  color: var(--color-text-light);
-  font-size: 1rem;
-  transition: transform 0.3s ease-in-out;
-  margin-left: 10px;
-  margin-top: 4px;
-}
-
-.footer .fa-github:hover {
-  transform: rotate(360deg) scale(1.2);
-  color: var(--color-accent);
-}
-
-/* DARK MODE SWITCH */
-
-/* The switch - the box around the slider */
-.switch {
-  --width-of-switch: 2em;
-  --height-of-switch: 2em;
-  /* size of sliding icon -- sun and moon */
-  --size-of-icon: 1.8em;
-  /* it is like a inline-padding of switch */
-  --slider-offset: 0.3em;
-  position: relative;
-  width: var(--width-of-switch);
-  height: var(--height-of-switch);
-  scale: 0.8;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* background-color: #f4f4f5; */
-  transition: .5s;
-  border-radius: 30px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: var(--size-of-icon, 1.4em);
-  width: var(--size-of-icon, 1.4em);
-  border-radius: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: linear-gradient(40deg, #ff8c00, #ffbc79 70%);
-  ;
-  transition: .5s;
-}
-
-input:checked+.slider:before {
-  background: var(--color-bg);
-  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
-  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
-  transition: .5s;
-}
-
 @media only screen and (max-width: 768px) {
 
   .navbar {
-    padding: 0px 20px;
+    padding: 0px 20px !important;
   }
 
   .navbar .logo {
-    font-size: 1rem;
+    font-size: 1rem !important;
+  }
+
+  .container_filter {
+    width: 100vw;
+  }
+
+  .filter {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px !important;
+    padding: 0px 20px !important;
+  }
+
+  form {
+    width: 100% !important;
+  }
+
+  .filter input {
+    width: 100%;
+  }
+
+  .container_select select {
+    width: 100% !important;
+  }
+
+  .container_select {
+    align-self: flex-start;
+    width: 100% !important;
   }
 }
 
