@@ -8,14 +8,14 @@ function Home() {
     const [countries, setCountries] = React.useState([]);
     const url = 'https://restcountries.com/v2/all'
 
-    const getCountryData = async () => {
+    const getCountriesData = async () => {
         const data = await axios.get(url).then(res => res.data);
         setCountries(data);
         console.log(data);
     }
 
     React.useEffect(() => {
-        getCountryData();
+        getCountriesData();
     }, [])
 
     return (

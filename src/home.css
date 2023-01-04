@@ -19,7 +19,7 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
-.flag {
+.grid_item .flag {
     position: relative;
     height: 50%;
     object-fit: cover;
@@ -28,18 +28,18 @@
     border-radius: 8px 8px 0px 0px;
 }
 
-.info {
+.grid_item .info {
     font-size: 0.85rem;
     width: 100%;
     padding: 20px 20px;
 }
 
-.name {
+.grid_item .name {
     font-size: 1.1rem;
     padding-bottom: 10px;
 }
 
-.info_item span {
+.grid_item .info .info_item span {
     font-weight: 300;
     color: var(--color-text-light);
 }

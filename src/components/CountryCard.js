@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 function CountryCard(props) {
 
   return (
-    <Link to={`/country/${props.code}`} className="grid_item">
+    <Link to={`/${props.name}`} className="grid_item"
+    >
       <img src={props.flag} alt={`Flag of ${props.name}`} className='flag'></img>
       <div className='info'>
         <h3 className='name'>{props.name}</h3>
