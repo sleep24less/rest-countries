@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion'
 import CountryCard from './CountryCard';
 import axios from 'axios';
-import './home.css'
+import '../home.css'
 
 function Home() {
     const [countries, setCountries] = React.useState([]);

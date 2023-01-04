@@ -1,17 +1,16 @@
 import React from 'react'
-import './filter.css'
+import '../filter.css'
 
 function Filter() {
     return (
         <div className='container_filter'>
-            <div className='filter'>
-                <form className='form'>
-                    <input type='search' name='search' id='search' placeholder='Search for a country...'></input>
-                    <button id='search_button' type='submit'><i className="fa-solid fa-magnifying-glass"></i></button>
-                </form>
+            <form className='form'>
+                <input type='search' name='search' id='search' placeholder='Search for a country...'></input>
+                <button id='search_button' type='submit'><i className="fa-solid fa-magnifying-glass"></i></button>
+
                 <div className='container_select'>
                     <select name='select' id='select' className='select'>
-                        <option value='Filter by region' disabled selected>Filter by region</option>
+                        <option value='Filter by region' disabled defaultChecked>Filter by region</option>
                         <option value='All'>All</option>
                         <option value='Africa'>Africa</option>
                         <option value='America'>America</option>
@@ -20,7 +19,7 @@ function Filter() {
                         <option value='Oceania'>Oceania</option>
                     </select>
                 </div>
-            </div>
+            </form>
         </div>
     )
 }

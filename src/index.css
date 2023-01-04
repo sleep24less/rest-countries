@@ -122,27 +122,29 @@ a {
     font-size: 1rem !important;
   }
 
-  .container_filter {
-    width: 100vw;
+  .main {
+    padding: 0 !important;
   }
 
-  .filter {
-    flex-direction: column;
-    gap: 20px;
+  .container_filter {
+    width: 100vw;
     margin-top: 30px !important;
     padding: 0px 20px !important;
   }
 
   form {
+    padding: 0 !important;
+    gap: 20px;
+    flex-direction: column;
     width: 100% !important;
   }
 
-  .filter input {
-    width: 100%;
+  #search_button {
+    left: 15px !important;
   }
 
   .container_select select {
-    width: 100% !important;
+    width: 60% !important;
   }
 
   .container_select {

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-function CountryPage({ match }) {
+function CountryPage(props) {
     const [countries, setCountries] = React.useState([]);
     const url = 'https://restcountries.com/v2/all'
 
@@ -25,7 +25,7 @@ function CountryPage({ match }) {
             transition={{ duration: 0.8 }}
             className='main country_page'
         >
-            <h1>{match.code}</h1>
+            <h1>{props.code}</h1>
             <Link to="/" className="navbar_item">Back to home</Link>
         </motion.div>
     )

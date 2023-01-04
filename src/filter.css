@@ -1,18 +1,13 @@
 .container_filter {
-    min-width: 100%;
-}
-
-.filter {
+    width: 100%;
+    max-width: 1240px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1240px;
-    margin: 0 auto;
     margin-top: 50px;
-    padding: 0 60px;
 }
 
-.filter input {
+.container_filter input {
     background-color: var(--color-bg-elements);
     height: 40px;
     padding-left: 50px;
@@ -25,23 +20,26 @@
 }
 
 form {
+    display: flex;
+    justify-content: space-between;
     position: relative;
-    width: 300px;
-    height: 40px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 60px;
 }
 
-.filter input::placeholder {
+.container_filter input::placeholder {
     color: var(--color-text-light);
 }
 
-.filter input:before {
+.container_filter input:before {
     content: "";
     position: absolute;
     left: 10px;
     top: 0;
     bottom: 0;
     width: 20px;
-    background-image: url('../assets/magnifying-glass-solid.svg') center / contain no-repeat;
+    background-image: url('./assets/magnifying-glass-solid.svg') center / contain no-repeat;
     color: var(--color-text-light);
 }
 
@@ -51,12 +49,12 @@ form {
     background: none;
     color: var(--color-text-light);
     font-family: inherit;
-    left: 15px;
+    left: 75px;
     top: 9px;
     cursor: pointer;
 }
 
-.filter select {
+.container_filter select {
     background-color: var(--color-bg-elements);
     height: 40px;
     font-family: inherit;
