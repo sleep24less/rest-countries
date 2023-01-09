@@ -152,6 +152,16 @@ a {
     align-self: flex-start;
     width: 100% !important;
   }
+
+  .country_info {
+    flex-direction: column;
+  }
+
+  .country_info .flag {
+    height: auto;
+    max-width: 100%;
+  }
+
 }
 
 /* Hover only works on devices with hover capabilities */

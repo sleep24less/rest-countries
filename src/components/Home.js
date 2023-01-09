@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import CountryCard from './CountryCard';
 import axios from 'axios';
 import '../home.css'
+import Filter from './Filter';
 
 function Home() {
     const [countries, setCountries] = React.useState([]);
@@ -19,29 +20,32 @@ function Home() {
     }, [])
 
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
-            className='container main home'
-        >
-            {countries.map(country => {
+        <>
+            <Filter />
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8 }}
+                className='container main home'
+            >
+                {countries.map(country => {
 
-                const { numericCode, name, population, region, capital, flag, cioc } = country;
+                    const { numericCode, name, population, region, capital, flag, cioc } = country;
 
-                return <CountryCard
-                    key={numericCode}
-                    code={cioc}
-                    className='grid_element'
-                    flag={flag}
-                    name={name}
-                    capital={capital}
-                    region={region}
-                    population={population}
-                />
-            })}
-        </motion.div>
+                    return <CountryCard
+                        key={numericCode}
+                        code={cioc}
+                        className='grid_element'
+                        flag={flag}
+                        name={name}
+                        capital={capital}
+                        region={region}
+                        population={population}
+                    />
+                })}
+            </motion.div>
+        </>
     )
 }
 

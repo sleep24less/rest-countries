@@ -16,7 +16,7 @@ function CountryPage() {
 
     React.useEffect(() => {
         getCountryData();
-    }, [])
+    })
 
     return (
         <motion.div
@@ -26,7 +26,8 @@ function CountryPage() {
             transition={{ duration: 0.8 }}
             className='main country_page'
         >
-            <Link to="/" className="back_button"><i className="fa-solid fa-chevron-left"></i><p>Back to home</p></Link>
+            <Link to="/" className="back_button"><i className="fa-solid fa-chevron-left"></i><p>Back</p></Link>
+
             {country.map(country => {
                 const { numericCode, flag, name, nativeName, population, region, subregion, capital, topLevelDomain, currencies, languages, borders } = country
 
@@ -54,7 +55,7 @@ function CountryPage() {
                                 <li className='info_item'>Region: <span>{region}
                                 </span></li>
                                 <li className='info_item'>Sub Region: <span>{subregion}</span></li>
-                                {capital && <li className='info_item'>Capital: <span>{capital}</span></li>}
+                                {capital && <li className='info_item capital'>Capital: <span>{capital}</span></li>}
                                 <li className='info_item'>Top Level Domain: <span>{topLevelDomain}</span></li>
                                 {currencies && <li className='info_item'>Currencies: <span>{stringCurrencies}</span></li>}
                                 <li className='info_item'>Languages: <span>{stringLanguages}</span></li>
