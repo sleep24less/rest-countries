@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/rest-countries/static/css/main.04e52b6b.css",
-    "main.js": "/rest-countries/static/js/main.1d71bfd8.js",
+    "main.js": "/rest-countries/static/js/main.2fce4b0f.js",
     "index.html": "/rest-countries/index.html",
     "static/media/magnifying-glass-solid.svg": "/rest-countries/static/media/magnifying-glass-solid.06e310dbfbf3ab21da47.svg",
     "main.04e52b6b.css.map": "/rest-countries/static/css/main.04e52b6b.css.map",
-    "main.1d71bfd8.js.map": "/rest-countries/static/js/main.1d71bfd8.js.map"
+    "main.2fce4b0f.js.map": "/rest-countries/static/js/main.2fce4b0f.js.map"
   },
   "entrypoints": [
     "static/css/main.04e52b6b.css",
-    "static/js/main.1d71bfd8.js"
+    "static/js/main.2fce4b0f.js"
   ]
 }
