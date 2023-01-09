@@ -1,9 +1,7 @@
 import React from 'react'
 import '../filter.css'
 
-function Filter() {
-    // Waits for the content to load before creating variables from the DOM
-    // window.addEventListener('DOMContentLoaded', () => {
+function Filter(props) {
 
     function handleChange(e) {
         const { value } = e.target;
@@ -19,7 +17,6 @@ function Filter() {
             }
         })
     }
-    // })
 
     return (
         <div className='container_filter'>
@@ -28,11 +25,11 @@ function Filter() {
                 <button id='search_button' type='button'><i className="fa-solid fa-magnifying-glass"></i></button>
 
                 <div className='container_select'>
-                    <select name='select' id='select' className='select'>
+                    <select name='select' id='select' className='select' onChange={props.handleChange}>
                         <option value='Filter by region' disabled defaultChecked>Filter by region</option>
                         <option value='All'>All</option>
                         <option value='Africa'>Africa</option>
-                        <option value='America'>America</option>
+                        <option value='Americas'>Americas</option>
                         <option value='Asia'>Asia</option>
                         <option value='Europe'>Europe</option>
                         <option value='Oceania'>Oceania</option>

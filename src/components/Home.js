@@ -19,9 +19,58 @@ function Home() {
         getCountriesData();
     }, [])
 
+    function handleChange(e) {
+        const { value } = e.target
+        let countriesArray = [];
+
+        if (value === 'All') {
+            getCountriesData();
+        }
+        else if (value === 'Africa') {
+            countriesArray = countries.filter(country => {
+                if (country.region === 'Africa') {
+                    return country
+                }
+            })
+            setCountries(countriesArray);
+        }
+        else if (value === 'Americas') {
+            countriesArray = countries.filter(country => {
+                if (country.region === 'Americas') {
+                    return country
+                }
+            })
+            setCountries(countriesArray);
+        }
+        else if (value === 'Asia') {
+            countriesArray = countries.filter(country => {
+                if (country.region === 'Asia') {
+                    return country
+                }
+            })
+            setCountries(countriesArray);
+        }
+        else if (value === 'Europe') {
+            countriesArray = countries.filter(country => {
+                if (country.region === 'Europe') {
+                    return country
+                }
+            })
+            setCountries(countriesArray);
+        }
+        else if (value === 'Oceania') {
+            countriesArray = countries.filter(country => {
+                if (country.region === 'Oceania') {
+                    return country
+                }
+            })
+            setCountries(countriesArray);
+        }
+    }
+
     return (
         <>
-            <Filter />
+            <Filter handleChange={handleChange} />
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
