@@ -75,7 +75,7 @@ function CountryPage() {
                                 <li className='info_item'>Languages: <span>{stringLanguages}</span></li>
                             </ul>
                             {bordersData.length > 0 && <ul className='border'>
-                                Border Countries:
+                                <p>Border Countries:</p>
                                 {bordersData.map((borderCountry) => {
                                     if (arrayBorders.includes(borderCountry.alpha3Code)) {
                                         return (
