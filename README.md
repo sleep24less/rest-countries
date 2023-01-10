@@ -1,5 +1,6 @@
 REST Countries API with color theme switcher
 
+[Live link](https://sleep24less.github.io/rest-countries/)
 
 Users should be able to:
 
