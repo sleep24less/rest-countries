@@ -157,7 +157,7 @@ a {
     flex-direction: column;
   }
 
-  .country_info .flag {
+  .info_section .flag {
     height: auto;
     max-width: 100%;
   }
